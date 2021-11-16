@@ -14,7 +14,8 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 
-import { Home } from './src/Screens/Home';
+// import { Home } from './src/Screens/Home';
+import { CarDetails } from './src/Screens/CarDetails';
 
 import theme from './src/styles/theme';
 
@@ -33,7 +34,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <CarDetails />
     </ThemeProvider>
   );
 }
