@@ -16,10 +16,10 @@ import {
 
 export function Home() {
   const carData = {
-    brand: 'audi',
+    brand: 'Audi',
     name: 'RS 5 Coupé',
     rend: {
-      period: 'ao dia',
+      period: 'Ao dia',
       price: 120,
     },
     thumbnail: 'https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png'
