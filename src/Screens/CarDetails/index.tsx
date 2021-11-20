@@ -3,6 +3,7 @@ import React from 'react';
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
 import { Acessory } from '../../components/Acessory';
+import { Button } from '../../components/Button';
 
 import speedSvg from '../../assets/speed.svg';
 import accelerationSvg from '../../assets/acceleration.svg';
@@ -25,6 +26,7 @@ import {
   Price,
   About,
   Acessories,
+  Footer,
 } from './styles';
 
 export function CarDetails() {
@@ -37,7 +39,7 @@ export function CarDetails() {
       <CarImages>
         <ImageSlider
           imagesUrl={['https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png']}
-        />
+          />
       </CarImages>
 
       <Content>
@@ -68,6 +70,9 @@ export function CarDetails() {
           É um belíssimo carro para quem gosta de acelerar.
         </About>
       </Content>
+      <Footer>
+        <Button title="Confirmar" onPress={() => {}} />
+      </Footer>
 
     </Container>
   );
