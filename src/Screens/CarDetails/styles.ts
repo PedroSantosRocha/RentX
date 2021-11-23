@@ -15,7 +15,7 @@ export const Header = styled.View`
   position: absolute;
   margin-top: ${getStatusBarHeight() + 18}px;
   margin-left: 24px;
-  `;
+`;
 
 export const CarImages = styled.View`
   margin-top: ${getStatusBarHeight() + 32}px;
