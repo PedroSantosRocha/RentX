@@ -1,4 +1,5 @@
 import React from 'react';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
@@ -29,7 +30,16 @@ import {
   Footer,
 } from './styles';
 
-export function CarDetails() {
+interface NavigationProps {
+  navigation: NativeStackNavigationProp<any, any>;
+}
+
+export function CarDetails({ navigation }: NavigationProps) {
+  
+  function handleConfirmHental() {
+    navigation.navigate('Scheduling');
+  }
+
   return (
     <Container>
       <Header>
@@ -71,7 +81,7 @@ export function CarDetails() {
         </About>
       </Content>
       <Footer>
-        <Button title="Confirmar" onPress={() => {}} />
+        <Button title="Escolher período do aluguel" onPress={handleConfirmHental} />
       </Footer>
 
     </Container>

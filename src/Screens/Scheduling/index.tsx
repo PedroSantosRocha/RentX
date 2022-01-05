@@ -1,6 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { useTheme } from 'styled-components';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { BackButton } from '../../components/BackButton';
 import { Button } from '../../components/Button';
@@ -21,8 +22,17 @@ import {
   Footer,
 } from './styles';
 
-export function Scheduling() {
+interface NavigationProps {
+  navigation: NativeStackNavigationProp<any, any>;
+}
+
+export function Scheduling({ navigation }: NavigationProps) {
   const theme = useTheme();
+
+  function handleConfirmHental() {
+    navigation.navigate('SchedulingDetails');
+  }
+
   return (
     <Container>
       <Header>
@@ -63,7 +73,7 @@ export function Scheduling() {
       </Content>
 
       <Footer>
-        <Button title="Confirmar" onPress={() => {}} />
+        <Button title="Confirmar" onPress={handleConfirmHental} />
       </Footer>
     </Container>
   );
